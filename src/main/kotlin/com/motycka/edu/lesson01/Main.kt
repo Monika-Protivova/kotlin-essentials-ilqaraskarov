@@ -5,6 +5,7 @@ package com.motycka.edu.lesson01
     2. Print "Hello, Kotlin!" to the console
     3. Print the program arguments passed to the main function as: "Program arguments: arg1, arg2, ..."
  */
+
 fun main(args: Array<String>) {
     println("Hello, Kotlin!")
     println("Program arguments: ${args.joinToString(" ")}")
