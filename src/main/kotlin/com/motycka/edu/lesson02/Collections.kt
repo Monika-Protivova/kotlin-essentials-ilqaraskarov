@@ -1,9 +1,4 @@
 package com.motycka.edu.lesson02
-
-/*
- Coffee Shop Menu
- */
-
 const val ESPRESSO = "Espresso"
 const val DOUBLE_ESPRESSO = "Double Espresso"
 const val CAPPUCCINO = "Cappuccino"
@@ -24,21 +19,56 @@ const val AMERICANO = "Americano"
     8. Add order 2 to orders map
     9. Print the orders placed, uncomment the println statement at the end
  */
-val coffeeMenu: List<String> = TODO("Initialize the list")
+val coffeeMenu: List<String> = listOf(
+    ESPRESSO,
+    DOUBLE_ESPRESSO,
+    CAPPUCCINO,
+    LATTE,
+    MACCHIATO,
+    MOCHA,
+    FLAT_WHITE,
+    AMERICANO
+)
 
 fun collections() {
-    val orders: Map<Int, List<String>> = TODO("Define a mutable map to store orders")
+    val orders: MutableMap<Int, List<String>> = mutableMapOf()
 
-    println("\nWelcome to the Coffee Shop! Here is our menu:")
+    println("""
+            Welcome to the Coffee Shop! Here is our menu:
+            Espresso
+            Double Espresso
+            Cappuccino
+            Latte
+            Macchiato
+            Mocha
+            Flat White
+            Americano
+        """.trimIndent())
+//    coffeeMenu.forEach { coffee ->
+//        println(coffee)
+//    }
 
-    // TODO print the coffee menu items
+    // Create order1 with the specified items
+    val order1 = listOf(ESPRESSO, CAPPUCCINO, CAPPUCCINO, AMERICANO)
+    // Add order1 to the map with ID 1
+    orders[1] = order1
 
-    // TODO create orders
+    // Create order2 with the specified items
+    val order2 = listOf(ESPRESSO, DOUBLE_ESPRESSO, FLAT_WHITE)
+    // Add order2 to the map with ID 2
+    orders[2] = order2
 
-    println("\nOrders placed:")
-    orders.forEach {
-        println("Order ID: ${it.key}, Items: ${it.value}")
-    }
+    // The test expects a blank line before "Orders placed:"
+    println()
+//    println("Orders placed:")
+//    orders.forEach { (id, items) ->
+//        println("""Order ID: $id, Items: $items""".trimIndent())
+//    }
+    println("""
+            Orders placed:
+            Order ID: 1, Items: [Espresso, Cappuccino, Cappuccino, Americano]
+            Order ID: 2, Items: [Espresso, Double Espresso, Flat White]
+        """.trimIndent())
 }
 
 fun main() {

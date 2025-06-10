@@ -1,19 +1,19 @@
 package com.motycka.edu.lesson02
-
+import kotlin.math.abs
 
 fun evaluate(a: Double, b: Double) {
 
-    val sum = TODO()
-    val difference = TODO()
-    val product = TODO()
+    val sum = "%.2f".format((a + b)).toDouble()
+    val difference = "%.2f".format((a - b)).toDouble()
+    val product = a * b
 
-    val isEqual = TODO()
-    val isNotEqual = TODO()
-    val aIsGreater = TODO()
-    val aIsLessOrEqual = TODO()
+    val isEqual = a == b
+    val isNotEqual = a != b
+    val aIsGreater = a > b
+    val aIsLessOrEqual = a<=b
 
-    val bothIsAboveZero = TODO()
-    val eitherIsAboveOrEqualZero = TODO()
+    val bothIsAboveZero = a>0 && b > 0
+    val eitherIsAboveOrEqualZero = a>=0 || b >= 0
 
     println("Sum: $sum")
     println("Difference: $difference")
@@ -27,5 +27,5 @@ fun evaluate(a: Double, b: Double) {
 }
 
 fun main() {
-    evaluate(2.4, 3.6)
+    evaluate(-2.4, 3.6)
 }
